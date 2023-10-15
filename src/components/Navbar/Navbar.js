@@ -1,5 +1,5 @@
 import "./Navbar.scss"
-
+import Logo from "../../images/logo-2.png"
 import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai"
 import { LuSearch } from "react-icons/lu"
 import { CiMenuKebab } from "react-icons/ci"
@@ -8,11 +8,15 @@ const Navbar = () => {
     return (
         <header>
             <div className="wrapper">
-                <h3>
-                    <a href="">
-                        <span>Deli</span>Food
-                    </a>
-                </h3>
+                <div className="logo">
+                    <img src={Logo} alt="" />
+                    <h3>
+                        <a href="">
+                            <span>Deli</span>Food
+                        </a>
+                    </h3>
+                </div>
+
                 <div className="navigation">
                     <a href="">Home</a>
                     <a href="">Menu</a>
@@ -39,9 +43,9 @@ const Navbar = () => {
                         <a href="" className="sign-up-button">
                             Sign Up
                         </a>
-                        <button className="nav-button">
+                        <a href="" className="nav-button">
                             <CiMenuKebab />
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

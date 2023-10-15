@@ -102,3 +102,40 @@ footer {
         }
     }
 }
+
+@media (max-width: 1000px) {
+    footer {
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container {
+            width: 100%;
+            p {
+                width: 60%;
+            }
+        }
+
+        .newsletter-container {
+            width: 100%;
+        }
+
+        .links-container {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .links-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        .sections {
+            width: 100%;
+        }
+    }
+}
