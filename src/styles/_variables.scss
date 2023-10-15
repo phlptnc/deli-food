@@ -1,0 +1,33 @@
+@mixin center-child-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin center-child-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
