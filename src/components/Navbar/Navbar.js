@@ -1,30 +1,37 @@
+import React, { useEffect, useState } from "react"
 import "./Navbar.scss"
+import MenuLinks from "./Navlinks"
 import Logo from "../../images/logo-2.png"
 import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai"
 import { LuSearch } from "react-icons/lu"
 import { CiMenuKebab } from "react-icons/ci"
 
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false)
+    const toggleNav = () => {
+        setMenuOpen(!menuOpen)
+    }
+
     return (
         <header>
             <div className="wrapper">
                 <div className="logo">
                     <img src={Logo} alt="" />
                     <h3>
-                        <a href="">
+                        <a href="/">
                             <span>Deli</span>Food
                         </a>
                     </h3>
                 </div>
 
+                {/* Mobile navigation menu */}
+                {menuOpen && (
+                    <div className="mobile-nav-container">
+                        <MenuLinks className="mobile-navigation" />
+                    </div>
+                )}
                 <div className="navigation">
-                    <a href="">Home</a>
-                    <a href="">Menu</a>
-                    <a href="">Blog</a>
-                    <a href="">About</a>
-                    <button className="close-button">
-                        <AiOutlineClose />
-                    </button>
+                    <MenuLinks />
                 </div>
                 <div className="right-section">
                     <div className="search-bar">
@@ -43,9 +50,9 @@ const Navbar = () => {
                         <a href="" className="sign-up-button">
                             Sign Up
                         </a>
-                        <a href="" className="nav-button">
+                        <div className="nav-button" onClick={toggleNav}>
                             <CiMenuKebab />
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>

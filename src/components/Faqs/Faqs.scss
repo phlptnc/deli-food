@@ -1,0 +1,79 @@
+@use "/src/styles/index.scss" as *;
+
+.faqs-container {
+    @include flex-row;
+
+    .left-section {
+        width: 50%;
+        @include center-child-row;
+    }
+
+    .right-section {
+        width: 50%;
+        height: 550px;
+        @include flex-col;
+
+        gap: 10px;
+
+        .faqs-header {
+            @include center-child-col;
+            margin-bottom: 10px;
+
+            h2 {
+                font-size: 3rem;
+            }
+        }
+
+        .faqs-container {
+            border: solid 1px;
+            padding: 20px 30px;
+            cursor: pointer;
+
+            .question-container {
+                @include space-between;
+                align-items: center;
+
+                h3 {
+                    font-size: 1.6rem;
+                }
+
+                span {
+                    font-size: 2.5rem;
+
+                    transition: 0.8s ease;
+                }
+            }
+
+            p {
+                font-size: 1.1rem;
+                line-height: 28px;
+                margin-top: 10px;
+
+                transition: all 0.8s;
+            }
+
+            .content {
+                display: none;
+
+                transition: all 0.8s;
+            }
+
+            .content-show {
+                display: block;
+
+                transition: all 0.8s;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .faqs-container {
+        .left-section {
+            display: none;
+        }
+        .right-section {
+            width: 100%;
+        }
+    }
+}
