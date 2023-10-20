@@ -1,6 +1,6 @@
 @use "/src/styles/index.scss" as *;
 
-.faqs-container {
+.faqs-section {
     @include flex-row;
 
     .left-section {
@@ -48,19 +48,16 @@
                 font-size: 1.1rem;
                 line-height: 28px;
                 margin-top: 10px;
-
                 transition: all 0.8s;
             }
 
             .content {
                 display: none;
-
                 transition: all 0.8s;
             }
 
             .content-show {
                 display: block;
-
                 transition: all 0.8s;
             }
         }
@@ -68,7 +65,7 @@
 }
 
 @media (max-width: 1000px) {
-    .faqs-container {
+    .faqs-section {
         .left-section {
             display: none;
         }

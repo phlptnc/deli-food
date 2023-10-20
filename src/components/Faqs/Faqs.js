@@ -10,7 +10,7 @@ function Faqs() {
 
     return (
         <>
-            <section className="faqs-container">
+            <section className="faqs-section">
                 <div className="left-section">
                     <img src={Chef} alt="img of a chef" />
                 </div>
