@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import faqsData from "./Data"
 
-function Question(faqs) {
+function Question() {
     const [selected, setSelected] = useState(null)
 
     const toggle = (i) => {
