@@ -1,7 +1,7 @@
 @use "/src/styles/index.scss" as *;
 
 .faqs-section {
-    @include flex-row;
+    flex-direction: row;
 
     .left-section {
         width: 50%;
