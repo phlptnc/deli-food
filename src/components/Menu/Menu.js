@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import "./Menu.scss"
-import breakfastData from "./Data"
+import breakfastData from "./Breakfast"
+import lunchData from "./Lunch"
+import dinnerData from "./Dinner"
 
 function Menu() {
     const [toggled, setToggled] = useState(1)
@@ -98,14 +100,74 @@ function Menu() {
                             toggled === 2 ? "active-menu-list" : "menu-list"
                         }
                     >
-                        Lunch
+                        {lunchData.map((item) => (
+                            <div className="food">
+                                <div className="top-section">
+                                    <img
+                                        src={require("../../images/lunch/" +
+                                            item.name +
+                                            ".jpg")}
+                                        alt="food"
+                                    />
+                                </div>
+                                <div className="lower-section">
+                                    <h3>{item.name}</h3>
+                                    <p className="description">
+                                        {item.description}
+                                    </p>
+                                    <div className="rate-wrapper">
+                                        <img
+                                            src={require("../../images/ratings/rating-" +
+                                                item.stars * 10 +
+                                                ".png")}
+                                            alt="rating by stars"
+                                        />
+                                        <p>({item.reviews}) Reviews</p>
+                                    </div>
+                                    <div className="price-wrapper">
+                                        <p>${item.price}</p>
+                                        <button>Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                     <div
                         className={
                             toggled === 3 ? "active-menu-list" : "menu-list"
                         }
                     >
-                        Dinner
+                        {dinnerData.map((item) => (
+                            <div className="food">
+                                <div className="top-section">
+                                    <img
+                                        src={require("../../images/dinner/" +
+                                            item.name +
+                                            ".jpg")}
+                                        alt="food"
+                                    />
+                                </div>
+                                <div className="lower-section">
+                                    <h3>{item.name}</h3>
+                                    <p className="description">
+                                        {item.description}
+                                    </p>
+                                    <div className="rate-wrapper">
+                                        <img
+                                            src={require("../../images/ratings/rating-" +
+                                                item.stars * 10 +
+                                                ".png")}
+                                            alt="rating by stars"
+                                        />
+                                        <p>({item.reviews}) Reviews</p>
+                                    </div>
+                                    <div className="price-wrapper">
+                                        <p>${item.price}</p>
+                                        <button>Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

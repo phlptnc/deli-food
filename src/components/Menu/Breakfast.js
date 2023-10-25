@@ -1,6 +1,5 @@
 const breakfastData = [
     {
-        picture: "",
         name: "Grilled Cheese",
         description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut et saepe consequuntur ipsam perspiciatis magni.",
@@ -9,25 +8,6 @@ const breakfastData = [
         price: "20",
     },
     {
-        picture: "",
-        name: "Breakfast Omelette",
-        description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut et saepe consequuntur ipsam perspiciatis magni.",
-        stars: "4",
-        reviews: "300",
-        price: "30",
-    },
-    {
-        picture: "",
-        name: "Full English Breakfast",
-        description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut et saepe consequuntur ipsam perspiciatis magni.",
-        stars: "5",
-        reviews: "450",
-        price: "40",
-    },
-    {
-        picture: "",
         name: "Fluffy Pancakes",
         description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut et saepe consequuntur ipsam perspiciatis magni.",
@@ -36,7 +16,23 @@ const breakfastData = [
         price: "15",
     },
     {
-        picture: "",
+        name: "Full English Breakfast",
+        description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut et saepe consequuntur ipsam perspiciatis magni.",
+        stars: "5",
+        reviews: "450",
+        price: "40",
+    },
+
+    {
+        name: "Breakfast Omelette",
+        description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut et saepe consequuntur ipsam perspiciatis magni.",
+        stars: "4",
+        reviews: "300",
+        price: "30",
+    },
+    {
         name: "Smoothie Bowl",
         description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut et saepe consequuntur ipsam perspiciatis magni.",
@@ -45,7 +41,6 @@ const breakfastData = [
         price: "20",
     },
     {
-        picture: "",
         name: "Tapsilog",
         description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut et saepe consequuntur ipsam perspiciatis magni.",
