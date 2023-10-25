@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import "./Navbar.scss"
 import MenuLinks from "./Navlinks"
 import Logo from "../../images/logo-2.png"
-import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai"
+import { AiOutlineShoppingCart } from "react-icons/ai"
 import { LuSearch } from "react-icons/lu"
 import { CiMenuKebab } from "react-icons/ci"
 
@@ -44,10 +44,10 @@ const Navbar = () => {
                         <AiOutlineShoppingCart />
                     </div>
                     <div className="accounts">
-                        <a href="" className="login-button">
+                        <a href="/" className="login-button">
                             Login
                         </a>
-                        <a href="" className="sign-up-button">
+                        <a href="/" className="sign-up-button">
                             Sign Up
                         </a>
                         <div className="nav-button" onClick={toggleNav}>

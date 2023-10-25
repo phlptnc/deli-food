@@ -1,0 +1,114 @@
+@use "../../styles/index.scss" as *;
+
+.menu-section {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+
+    .header-container {
+        @include center-child-col;
+        gap: 0.5rem;
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            width: 70%;
+            text-align: center;
+            line-height: 25px;
+        }
+    }
+
+    .wrapper {
+        width: 60%;
+        @include center-child-row;
+
+        .selections {
+            width: 80%;
+            @include flex-row;
+            justify-content: space-around;
+
+            div {
+                font-size: 1.3rem;
+                font-weight: 500;
+                cursor: pointer;
+                transition: 0.3s ease;
+            }
+
+            .active-menu-button {
+                color: $primary-100;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .menu-body {
+        width: 90%;
+
+        .menu-list {
+            display: none;
+            transition: 0.3s ease;
+        }
+
+        .active-menu-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .food {
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+
+            .top-section {
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: fill;
+                }
+            }
+
+            .lower-section {
+                @include flex-col;
+                gap: 10px;
+                padding: 20px;
+
+                .description {
+                    font-size: 1rem;
+                    line-height: 22px;
+                }
+
+                .rate-wrapper {
+                    @include space-between;
+
+                    img {
+                        width: 110px;
+                    }
+                }
+
+                .price-wrapper {
+                    @include space-between;
+                    align-items: center;
+
+                    p {
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                    }
+
+                    button {
+                        background-color: $primary-100;
+                        color: $bg-200;
+                        font-size: 1rem;
+                        border: none;
+                        border-radius: 5px;
+                        padding: 10px 30px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
