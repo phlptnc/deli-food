@@ -14,7 +14,11 @@ function Question() {
     return (
         <>
             {faqsData.map((item, i) => (
-                <div className="faqs-container" onClick={() => toggle(i)}>
+                <div
+                    className="faqs-container"
+                    key={item.id}
+                    onClick={() => toggle(i)}
+                >
                     <div className="question-container">
                         <h3>{item.question}</h3>
                         <span>{selected === i ? "-" : "+"}</span>

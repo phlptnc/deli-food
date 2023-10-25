@@ -37,7 +37,7 @@ function Feedback() {
                                         src={require("../../images/customer/" +
                                             item.picture +
                                             ".jpg")}
-                                        alt="picture of customer"
+                                        alt="customer"
                                         className="image"
                                     />
                                 </div>
@@ -56,10 +56,7 @@ function Feedback() {
                             </div>
                             <div className="comment">
                                 <div className="qoute">
-                                    <img
-                                        src={Quotation}
-                                        alt="image of quotation mark"
-                                    />
+                                    <img src={Quotation} alt="quotation mark" />
                                 </div>
                                 <p>{item.comment}</p>
                             </div>
