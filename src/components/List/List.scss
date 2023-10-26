@@ -3,7 +3,6 @@
 .list-section {
     min-height: 100vh;
     flex-direction: column;
-    outline: pink solid 2px;
     gap: 3rem;
 
     .header-container {
@@ -90,10 +89,37 @@
         .food-section {
             overflow: hidden;
             width: 72%;
-            background-color: orange;
+            position: relative;
+
+            .button-wrapper {
+                width: 100px;
+                position: absolute;
+                right: 40px;
+                top: 15px;
+                @include space-between;
+
+                .previous-button,
+                .next-button {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1.3rem;
+                    background-color: $bg-300;
+                    @include center-child-row;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: 0.3s ease;
+                }
+
+                .previous-button:hover,
+                .next-button:hover {
+                    background-color: $primary-100;
+                    color: $bg-200;
+                }
+            }
 
             .active {
-                display: block;
+                @include space-evenly;
+                align-items: center;
             }
 
             .hidden {
@@ -103,6 +129,62 @@
             .food-display {
                 width: 100%;
                 height: 100%;
+                transition: 0.8s ease;
+
+                .food {
+                    width: 45%;
+
+                    .wrapper:hover .button {
+                        text-decoration: underline;
+                    }
+
+                    .wrapper {
+                        width: 100%;
+                        height: 400px;
+                        position: relative;
+                        border-radius: 35px;
+                        overflow: hidden;
+                        cursor: pointer;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .details {
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            padding: 30px;
+                            width: 100%;
+
+                            color: $bg-200;
+                            background: linear-gradient(
+                                0deg,
+                                rgba(29, 29, 29, 0.45) 0%,
+                                rgba(41, 41, 41, 0.45) 80%,
+                                rgba(255, 255, 255, 0) 100%
+                            );
+
+                            .name {
+                                font-size: 1.3rem;
+                                font-weight: 600;
+                            }
+
+                            .price {
+                                font-size: 1.5rem;
+                                font-weight: 500;
+                                margin-bottom: 5px;
+                            }
+
+                            .button {
+                                width: fit-content;
+                                font-size: 1rem;
+                                transition: 0.3s ease;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

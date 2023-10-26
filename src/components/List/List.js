@@ -1,6 +1,14 @@
 import React, { useState } from "react"
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa6"
 import "./List.scss"
 import category from "./Categories"
+import Burger from "./Data/Burger"
+import Pasta from "./Data/Pasta"
+import Pastry from "./Data/Pastry"
+import Pizza from "./Data/Pizza"
+import IceCream from "./Data/IceCream"
+import Salad from "./Data/Salad"
+import Drinks from "./Data/Drinks"
 
 function List() {
     const [toggled, setToggled] = useState(0)
@@ -46,6 +54,14 @@ function List() {
                         </div>
                     </div>
                     <div className="food-section">
+                        <div className="button-wrapper">
+                            <div className="previous-button">
+                                <FaChevronLeft />
+                            </div>
+                            <div className="next-button">
+                                <FaChevronRight />
+                            </div>
+                        </div>
                         <div
                             className={
                                 toggled === 0
@@ -53,7 +69,7 @@ function List() {
                                     : "food-display hidden"
                             }
                         >
-                            Burger
+                            <Burger />
                         </div>
                         <div
                             className={
@@ -62,7 +78,7 @@ function List() {
                                     : "food-display hidden"
                             }
                         >
-                            Pasta
+                            <Pasta />
                         </div>
                         <div
                             className={
@@ -71,7 +87,7 @@ function List() {
                                     : "food-display hidden"
                             }
                         >
-                            Pastry
+                            <Pastry />
                         </div>
                         <div
                             className={
@@ -80,7 +96,7 @@ function List() {
                                     : "food-display hidden"
                             }
                         >
-                            Pizza
+                            <Pizza />
                         </div>
                         <div
                             className={
@@ -89,7 +105,7 @@ function List() {
                                     : "food-display hidden"
                             }
                         >
-                            Ice Cream
+                            <IceCream />
                         </div>
                         <div
                             className={
@@ -98,7 +114,7 @@ function List() {
                                     : "food-display hidden"
                             }
                         >
-                            Salad
+                            <Salad />
                         </div>
 
                         <div
@@ -108,7 +124,7 @@ function List() {
                                     : "food-display hidden"
                             }
                         >
-                            Drinks
+                            <Drinks />
                         </div>
                     </div>
                 </div>
