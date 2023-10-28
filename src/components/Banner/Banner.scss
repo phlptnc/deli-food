@@ -1,0 +1,13 @@
+@use "../../styles/index.scss" as *;
+
+.banner-wrapper {
+    height: 450px;
+    width: 100%;
+    margin-bottom: 100px;
+    outline: red dashed 1px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
