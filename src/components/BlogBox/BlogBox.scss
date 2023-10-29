@@ -1,0 +1,48 @@
+@use "../../styles/index.scss" as *;
+
+.blog-box {
+    width: 800px;
+
+    img {
+        width: 100%;
+    }
+
+    .author {
+        @include flex-row;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+
+        .icon {
+            font-size: 1.5rem;
+            color: $primary-100;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+        line-height: 25px;
+        letter-spacing: 1px;
+        margin: 10px 0;
+    }
+
+    button {
+        font-size: 1.1rem;
+        font-weight: 500;
+        background-color: $primary-100;
+        color: $bg-200;
+        padding: 15px 30px;
+        border-radius: 5px;
+        margin-top: 10px;
+        border: none;
+        cursor: pointer;
+    }
+}
