@@ -123,6 +123,9 @@
 
 @media (max-width: 900px) {
     .menu-section {
+        .wrapper {
+            width: 100%;
+        }
         .menu-body {
             .active-menu-list {
                 grid-template-columns: repeat(2, 1fr);
@@ -133,16 +136,55 @@
 
 @media (max-width: 600px) {
     .menu-section {
-        .wrapper {
-            width: 100%;
-        }
-
         .menu-body {
             .food {
                 .lower-section {
+                    .description {
+                        height: 4rem;
+                        width: 100%;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+
                     .rate-wrapper {
                         img {
                             width: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-section {
+        .menu-body {
+            .food {
+                .top-section {
+                    img {
+                        height: 150px;
+                    }
+                }
+
+                .lower-section {
+                    h3 {
+                        height: 2.8rem;
+                        width: 100%;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+
+                    .rate-wrapper {
+                        flex-direction: column;
+                    }
+                    .price-wrapper {
+                        button {
+                            padding: 10px 15px;
                         }
                     }
                 }

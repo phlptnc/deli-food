@@ -155,3 +155,15 @@ header {
         }
     }
 }
+
+@media (max-width: 600px) {
+    header {
+        .wrapper {
+            .accounts {
+                a {
+                    display: none;
+                }
+            }
+        }
+    }
+}
