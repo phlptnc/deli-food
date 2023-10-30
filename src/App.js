@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer"
 import Home from "./pages/Home"
 import Menu from "./pages/Menu"
 import Blog from "./pages/Blogs/Blog"
-import About from "./pages/About"
+import About from "./pages/About/About"
 
 function App() {
     return (

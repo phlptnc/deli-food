@@ -1,0 +1,53 @@
+@use "../../styles//index.scss" as *;
+
+.about-us {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+    min-height: 80vh;
+
+    h1 {
+        width: 300px;
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 50px;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    h1::before {
+        content: "About Us";
+        font-size: 4rem;
+        font-weight: 800;
+        position: absolute;
+        top: -35px;
+        left: 10px;
+        opacity: 0.1;
+    }
+
+    .who-we-are {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        img {
+            height: 400px;
+            width: 35%;
+        }
+
+        .right-section {
+            width: 40%;
+            @include flex-col;
+            gap: 10px;
+
+            h2 {
+                font-size: 2rem;
+                margin: 10px 0;
+            }
+
+            p {
+                line-height: 25px;
+            }
+        }
+    }
+}
