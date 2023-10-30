@@ -51,7 +51,7 @@ const Navbar = () => {
                         <AiOutlineShoppingCart />
                     </div>
                     <div className="accounts">
-                        <a href="/" className="login-button">
+                        <a href="account" className="login-button">
                             Login
                         </a>
                         <a href="/" className="sign-up-button">

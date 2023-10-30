@@ -1,0 +1,159 @@
+@use "../../styles//index.scss" as *;
+
+.login-section {
+    min-height: 95vh;
+
+    .login-container {
+        outline: $primary-100 solid 2px;
+        border-radius: 10px;
+        width: 500px;
+        padding: 40px 70px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .wrapper {
+        display: flex;
+        margin: 10px 0;
+        gap: 5px;
+
+        a {
+            color: $primary-100;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .upper-section {
+        @include flex-col;
+        margin-top: 30px;
+        gap: 5px;
+
+        h3 {
+            font-size: 0.8rem;
+            color: $text-200;
+        }
+
+        h3:nth-child(3) {
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px 5px;
+            font-size: 1rem;
+            background-color: $bg-200;
+            border: none;
+            border-bottom: $accent-200 solid 1px;
+        }
+
+        input:focus {
+            border-bottom: $primary-100 solid 2px;
+            outline: none;
+        }
+
+        .button-wrapper {
+            width: 100%;
+            @include center-child-row;
+            margin: 20px 0;
+
+            button {
+                width: 50%;
+                font-size: 1rem;
+                font-weight: 600;
+                color: $bg-200;
+                background-color: $primary-100;
+                border-radius: 5px;
+                border: none;
+                padding: 15px;
+                cursor: pointer;
+            }
+        }
+
+        p {
+            color: $primary-100;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        p:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .divider {
+        @include space-between;
+        align-items: center;
+        margin: 30px 0;
+        width: 100%;
+
+        span {
+            width: 45%;
+            border: $accent-200 solid 1px;
+        }
+    }
+
+    .lower-section {
+        @include flex-col;
+        gap: 10px;
+
+        button {
+            @include center-child-row;
+            gap: 5px;
+            padding: 15px 0;
+            background-color: $bg-200;
+            border: $accent-200 solid 1px;
+            border-radius: 30px;
+            font-size: 1rem;
+
+            .icon {
+                font-size: 1.5rem;
+            }
+        }
+
+        button:nth-child(2) {
+            .icon {
+                color: #4267b2;
+            }
+        }
+
+        p {
+            color: $primary-100;
+            margin-top: 30px;
+            font-weight: 600;
+            width: fit-content;
+            cursor: pointer;
+            transform: 0.3s ease;
+        }
+
+        p:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .login-section {
+        .login-container {
+            padding: 40px 40px;
+
+            .upper-section {
+                .button-wrapper {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .divider {
+                span {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}

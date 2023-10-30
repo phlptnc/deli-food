@@ -7,6 +7,7 @@ import Home from "./pages/Home"
 import Menu from "./pages/Menu/Menu"
 import Blog from "./pages/Blogs/Blog"
 import About from "./pages/About/About"
+import Login from "./pages/Login/Login"
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="menu" element={<Menu />} />
                 <Route path="blog" element={<Blog />} />
                 <Route path="about" element={<About />} />
+                <Route path="account" element={<Login />} />
             </Routes>
             <Footer />
         </div>
