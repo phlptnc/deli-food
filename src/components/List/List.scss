@@ -192,9 +192,20 @@
 
 @media (max-width: 900px) {
     .list-section {
+        .header-container {
+            width: 100%;
+        }
+
         .list-body {
+            width: 100%;
+
+            .lists {
+                width: 40%;
+            }
+
             .food-section {
                 width: 100%;
+
                 .button-wrapper {
                     width: 80px;
                     top: 0;
@@ -228,8 +239,29 @@
 @media (max-width: 700px) {
     .list-section {
         .list-body {
-            .lists {
-                width: 40%;
+            .food-section {
+                .button-wrapper {
+                    width: 55px;
+
+                    .previous-button,
+                    .next-button {
+                        width: 25px;
+                        height: 25px;
+                        font-size: 1rem;
+                    }
+                }
+
+                .food-display {
+                    .food {
+                        width: 90%;
+
+                        .wrapper {
+                            .details {
+                                padding: 20px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
