@@ -1,6 +1,6 @@
 import React from "react"
 import "./Footer.scss"
-import Logo from "../../images/logo-2.png"
+import Logo from "../../images/logo.png"
 import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi"
 
 function Footer() {

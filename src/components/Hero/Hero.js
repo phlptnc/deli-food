@@ -15,12 +15,12 @@ function Hero() {
                     <p>
                         The taste of your food largely depends on the quality of
                         the ingredients. Use fresh seasonal products and
-                        high-quality of meats and fish
+                        high-quality of meats and fish.
                     </p>
-                    <a href="">Order Now</a>
+                    <a href="/">Order Now</a>
                 </div>
                 <div className="right-section">
-                    <img src={HeroBurger} alt="image of a burger" />
+                    <img src={HeroBurger} alt="burger" />
                 </div>
             </section>
         </>
