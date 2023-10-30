@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import "./Navbar.scss"
 import MenuLinks from "./Navlinks"
+import { NavLink } from "react-router-dom"
 import Logo from "../../images/logo-2.png"
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import { LuSearch } from "react-icons/lu"
 import { CiMenuKebab } from "react-icons/ci"
+import { GoPerson } from "react-icons/go"
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -25,14 +27,29 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile navigation menu */}
-                {menuOpen && (
+                {/*menuOpen && (
                     <div className="mobile-nav-container">
                         <MenuLinks className="mobile-navigation" />
+
+                    </div>
+                )*/}
+
+                {menuOpen && (
+                    <div className="navigation">
+                        <MenuLinks />
+                        <NavLink
+                            to="/account"
+                            className={"account-nav"}
+                            style={{
+                                alignItems: "center",
+                                gap: "5px",
+                            }}
+                        >
+                            <GoPerson className="icon" />
+                            Account
+                        </NavLink>
                     </div>
                 )}
-                <div className="navigation">
-                    <MenuLinks />
-                </div>
                 <div className="right-section">
                     <div className="search-bar">
                         <input placeholder="Search" type="text"></input>
