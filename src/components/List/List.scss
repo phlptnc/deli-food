@@ -234,3 +234,13 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .list-section {
+        .header-container {
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -92,12 +92,21 @@
 
 @media (max-width: 600px) {
     .choose-us-section {
+        h2 {
+            font-size: 2rem;
+        }
         .wrapper {
             align-items: center;
             flex-direction: column;
 
             .container {
                 width: 60%;
+
+                .description {
+                    h3 {
+                        font-size: 1.3rem;
+                    }
+                }
             }
         }
     }

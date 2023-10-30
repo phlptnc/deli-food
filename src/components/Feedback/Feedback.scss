@@ -113,3 +113,16 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .feedback-section {
+        .feedback-header {
+            h2 {
+                font-size: 2rem;
+            }
+            p {
+                width: 95%;
+            }
+        }
+    }
+}

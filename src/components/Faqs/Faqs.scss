@@ -18,10 +18,15 @@
 
         .faqs-header {
             @include center-child-col;
+            gap: 0.5rem;
             margin-bottom: 10px;
 
             h2 {
                 font-size: 3rem;
+            }
+
+            p {
+                text-align: center;
             }
         }
 
@@ -73,6 +78,18 @@
         }
         .right-section {
             width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .faqs-section {
+        .right-section {
+            .faqs-header {
+                h2 {
+                    font-size: 2rem;
+                }
+            }
         }
     }
 }
