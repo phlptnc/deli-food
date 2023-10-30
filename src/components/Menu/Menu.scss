@@ -112,3 +112,41 @@
         }
     }
 }
+
+@media (max-width: 1100px) {
+    .menu-section {
+        .menu-body {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-section {
+        .menu-body {
+            .active-menu-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-section {
+        .wrapper {
+            width: 100%;
+        }
+
+        .menu-body {
+            .food {
+                .lower-section {
+                    .rate-wrapper {
+                        img {
+                            width: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
