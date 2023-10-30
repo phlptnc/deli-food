@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom"
 import Logo from "../../images/logo-2.png"
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai"
 import { LuSearch } from "react-icons/lu"
-import { CiMenuKebab } from "react-icons/ci"
+import { PiDotsThreeOutlineVerticalBold } from "react-icons/pi"
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -58,7 +58,7 @@ const Navbar = () => {
                             Sign Up
                         </a>
                         <div className="nav-button" onClick={toggleNav}>
-                            <CiMenuKebab />
+                            <PiDotsThreeOutlineVerticalBold />
                         </div>
                     </div>
                 </div>
