@@ -1,5 +1,6 @@
 import React from "react"
 import "./Footer.scss"
+import Logo from "../../images/logo-2.png"
 import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi"
 
 function Footer() {
@@ -9,15 +10,31 @@ function Footer() {
                 <div className="footer-container">
                     <div className="logo-container">
                         <h2>
-                            <a href="">
-                                <span>Deli</span>Food
+                            <a href="/" className="logo">
+                                <img src={Logo} alt="website logo" />
+                                <div>
+                                    <span>Deli</span>Food
+                                </div>
                             </a>
                         </h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Ducimus, itaque adipisci sapiente quae commodi
-                            natus!
-                        </p>
+                        <div className="lower-section">
+                            <p className="short-description">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ducimus, itaque adipisci
+                                sapiente quae commodi natus!
+                            </p>
+                            <p>
+                                Inspired from
+                                <a
+                                    href="https://www.behance.net/gallery/170545439/Order-Food-Online-Website-Design-Concept?fbclid=IwAR0-cGokDA3MepNd1aryOgF8m_VyZK6EvsYl34Rlhg8RuhHel0m0KLB5vjo"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="design"
+                                >
+                                    Muhammad Bilal
+                                </a>
+                            </p>
+                        </div>
                     </div>
                     <div className="newsletter-container">
                         <h3>Subscribe</h3>
@@ -25,11 +42,13 @@ function Footer() {
                             Subscribe to stay tuned for promos and latest
                             updates!
                         </p>
-                        <input
-                            type="email"
-                            placeholder="Enter your email address"
-                        ></input>
-                        <button>Subscribe</button>
+                        <div className="email-wrapper">
+                            <input
+                                type="email"
+                                placeholder="Enter your email address"
+                            ></input>
+                            <button>Subscribe</button>
+                        </div>
                     </div>
                     <div className="links-container">
                         <div className="about-section sections">

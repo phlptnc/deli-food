@@ -2,7 +2,7 @@
 
 footer {
     padding: 3rem 5%;
-    background-color: $primary-200;
+    background-color: $bg-300;
     color: $text-100;
 
     .footer-container {
@@ -14,10 +14,19 @@ footer {
 
 .logo-container {
     grid-row: 1/3;
-    a {
-        font-size: 1.6rem;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
         text-decoration: none;
         color: $text-100;
+        margin-bottom: 20px;
+
+        img {
+            width: 100px;
+            margin-right: 10px;
+        }
 
         span {
             color: $primary-100;
@@ -29,6 +38,13 @@ footer {
         line-height: 25px;
         margin-top: 10px;
     }
+
+    .design {
+        font-size: 1.1rem;
+        margin-left: 5px;
+        text-decoration: none;
+        color: $text-100;
+    }
 }
 
 .newsletter-container {
@@ -38,34 +54,44 @@ footer {
 
     p {
         font-size: 1.1rem;
-        margin: 5px 0;
+        margin: 5px 0 10px;
     }
 
-    input {
-        width: 40%;
-        height: 35px;
-        font-size: 1rem;
-        padding-left: 10px;
-    }
+    .email-wrapper {
+        display: flex;
+        align-items: center;
 
-    input:focus {
-        outline: none;
-    }
+        input {
+            width: 40%;
+            height: 42px;
+            border-radius: 5px 0 0 5px;
+            border: $accent-200 1px solid;
+            font-size: 1rem;
+            padding-left: 15px;
+        }
 
-    button {
-        font-size: 1rem;
-        color: $text-100;
-        background-color: $bg-100;
-        height: 40px;
-        padding: 0 20px;
-        cursor: pointer;
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $bg-200;
+            background-color: $primary-100;
+            height: 44px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            padding: 0 20px;
+            cursor: pointer;
+        }
     }
 }
 
 .links-container {
     font-size: 1.1rem;
     @include flex-row;
-    border-top: $bg-300 solid 2px;
+    border-top: $bg-200 solid 2px;
     padding-top: 40px;
     margin-top: 20px;
 
@@ -88,6 +114,7 @@ footer {
             }
 
             p:hover {
+                color: $primary-100;
                 font-weight: 700;
             }
         }
@@ -113,14 +140,25 @@ footer {
         }
 
         .logo-container {
+            display: flex;
             width: 100%;
+            gap: 50px;
+
             p {
-                width: 60%;
+                width: 100%;
             }
         }
 
         .newsletter-container {
             width: 100%;
+
+            .email-wrapper {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                }
+            }
         }
 
         .links-container {
@@ -130,12 +168,24 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .links-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        .sections {
-            width: 100%;
+    .footer-container {
+        .logo-container {
+            h2 {
+                a {
+                    @include center-child-col;
+                    gap: 10px;
+                }
+            }
+        }
+
+        .links-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            .sections {
+                width: 100%;
+            }
         }
     }
 }
@@ -143,5 +193,20 @@ footer {
 @media (max-width: 500px) {
     footer {
         margin-top: 100px;
+
+        .logo-container {
+            gap: 25px;
+
+            .lower-section {
+                .short-description {
+                    height: 5rem;
+                    width: 100%;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+        }
     }
 }
