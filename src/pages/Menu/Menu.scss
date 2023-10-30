@@ -1,0 +1,25 @@
+@use "../../styles/index.scss" as *;
+
+.menu-title {
+    @include center-child-row;
+
+    h1 {
+        font-size: 3rem;
+        margin-top: 50px;
+        position: relative;
+    }
+
+    h1::before {
+        content: "Menu";
+        font-size: 4rem;
+        font-weight: 800;
+        position: absolute;
+        top: -35px;
+        left: -25px;
+        opacity: 0.1;
+    }
+}
+
+.menu-wrapper {
+    margin-bottom: 150px;
+}
