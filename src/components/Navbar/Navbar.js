@@ -54,7 +54,7 @@ const Navbar = () => {
                         <a href="account" className="login-button">
                             Login
                         </a>
-                        <a href="/" className="sign-up-button">
+                        <a href="signup" className="sign-up-button">
                             Sign Up
                         </a>
                         <div className="nav-button" onClick={toggleNav}>

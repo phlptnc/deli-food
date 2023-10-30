@@ -1,0 +1,45 @@
+@use "../../styles/index.scss" as *;
+
+.socials-button {
+    @include flex-col;
+    gap: 10px;
+
+    button {
+        @include center-child-row;
+        gap: 5px;
+        padding: 15px 0;
+        background-color: $bg-200;
+        border: $accent-200 solid 1px;
+        border-radius: 30px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        .icon {
+            font-size: 1.5rem;
+        }
+    }
+
+    button:hover {
+        background-color: $accent-300;
+    }
+
+    button:nth-child(2) {
+        .icon {
+            color: #4267b2;
+        }
+    }
+
+    p {
+        color: $primary-100;
+        margin-top: 30px;
+        font-weight: 600;
+        width: fit-content;
+        cursor: pointer;
+        transform: 0.3s ease;
+    }
+
+    p:hover {
+        text-decoration: underline;
+    }
+}

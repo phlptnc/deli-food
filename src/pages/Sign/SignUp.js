@@ -1,31 +1,29 @@
 import React from "react"
-import "./Login.scss"
+import "./SignUp.scss"
 import Account from "../../components/Account/Account"
 import Socials from "../../components/Socials/Socials"
 
-function Login() {
+function SignUp() {
     return (
         <>
-            <section className="login-section">
-                <div className="login-container">
-                    <h2>Sign In</h2>
+            <section className="signup-section">
+                <div className="signup-container">
+                    <h2>Create an account</h2>
                     <div className="wrapper">
-                        <p>New user?</p>
-                        <a href="/signup">Create an account</a>
+                        <p>Already have an account?</p>
+                        <a href="/account">Sign in</a>
                     </div>
-                    <Account name="Login" />
-                    <p className="forgotten">Forgotten Password?</p>
+                    <Account name="Sign Up" />
                     <div className="divider">
                         <span></span>
                         Or
                         <span></span>
                     </div>
                     <Socials />
-                    <p className="help-link">Get help signing in</p>
                 </div>
             </section>
         </>
     )
 }
 
-export default Login
+export default SignUp
