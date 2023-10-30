@@ -8,7 +8,7 @@
         @include center-child-row;
         gap: 5px;
         padding: 15px 0;
-        color: $text-100;
+        color: black;
         background-color: $bg-200;
         border: $accent-200 solid 1px;
         border-radius: 30px;
@@ -28,6 +28,12 @@
     button:nth-child(2) {
         .icon {
             color: #4267b2;
+        }
+    }
+
+    button:nth-child(3) {
+        .icon {
+            color: black;
         }
     }
 
