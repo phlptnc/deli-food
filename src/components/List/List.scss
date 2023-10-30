@@ -189,3 +189,48 @@
         }
     }
 }
+
+@media (max-width: 900px) {
+    .list-section {
+        .list-body {
+            .food-section {
+                width: 100%;
+                .button-wrapper {
+                    width: 80px;
+                    top: 0;
+                    right: 0;
+
+                    .previous-button,
+                    .next-button {
+                        width: 35px;
+                        height: 35px;
+                        font-size: 1.1rem;
+                    }
+                }
+
+                .active {
+                    flex-direction: column;
+                }
+
+                .food-display {
+                    .food {
+                        width: 70%;
+                        .wrapper {
+                            height: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .list-section {
+        .list-body {
+            .lists {
+                width: 40%;
+            }
+        }
+    }
+}
