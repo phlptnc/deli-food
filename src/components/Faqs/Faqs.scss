@@ -11,7 +11,7 @@
 
     .right-section {
         width: 50%;
-        height: 550px;
+        min-height: 550px;
         @include flex-col;
 
         gap: 10px;
