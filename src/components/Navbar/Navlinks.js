@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 import { FiHome } from "react-icons/fi"
 import { IoRestaurantOutline } from "react-icons/io5"
 import { RxReader } from "react-icons/rx"
-import { TiInfoLargeOutline } from "react-icons/ti"
+import { HiOutlineSquare3Stack3D } from "react-icons/hi2"
 
 function MenuLinks() {
     return (
@@ -33,7 +33,7 @@ function MenuLinks() {
                 to="/about "
                 style={{ display: "flex", alignItems: "center", gap: "5px" }}
             >
-                <TiInfoLargeOutline className="icon" />
+                <HiOutlineSquare3Stack3D className="icon" />
                 About
             </NavLink>
         </>

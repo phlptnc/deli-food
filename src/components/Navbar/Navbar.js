@@ -3,10 +3,9 @@ import "./Navbar.scss"
 import MenuLinks from "./Navlinks"
 import { NavLink } from "react-router-dom"
 import Logo from "../../images/logo-2.png"
-import { AiOutlineShoppingCart } from "react-icons/ai"
+import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai"
 import { LuSearch } from "react-icons/lu"
 import { CiMenuKebab } from "react-icons/ci"
-import { GoPerson } from "react-icons/go"
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -26,30 +25,21 @@ const Navbar = () => {
                     </h3>
                 </div>
 
-                {/* Mobile navigation menu */}
-                {/*menuOpen && (
-                    <div className="mobile-nav-container">
-                        <MenuLinks className="mobile-navigation" />
+                <div className={`navigation ${menuOpen ? "active" : ""}`}>
+                    <MenuLinks />
+                    <NavLink
+                        to="/account"
+                        className={"account-nav"}
+                        style={{
+                            alignItems: "center",
+                            gap: "5px",
+                        }}
+                    >
+                        <AiOutlineUser className="icon" />
+                        Account
+                    </NavLink>
+                </div>
 
-                    </div>
-                )*/}
-
-                {menuOpen && (
-                    <div className="navigation">
-                        <MenuLinks />
-                        <NavLink
-                            to="/account"
-                            className={"account-nav"}
-                            style={{
-                                alignItems: "center",
-                                gap: "5px",
-                            }}
-                        >
-                            <GoPerson className="icon" />
-                            Account
-                        </NavLink>
-                    </div>
-                )}
                 <div className="right-section">
                     <div className="search-bar">
                         <input placeholder="Search" type="text"></input>
