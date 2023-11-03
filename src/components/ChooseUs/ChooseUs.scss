@@ -1,7 +1,8 @@
 @use "../../styles/index.scss" as *;
 
 .choose-us-section {
-    min-height: 80vh;
+    min-height: 90vh;
+    outline: red dashed 1px;
     flex-direction: column;
 
     h2 {
@@ -92,6 +93,7 @@
 
 @media (max-width: 600px) {
     .choose-us-section {
+        margin-bottom: 5rem;
         h2 {
             font-size: 2rem;
         }
@@ -109,5 +111,11 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 500px) {
+    .choose-us-section {
+        margin-top: 5rem;
     }
 }

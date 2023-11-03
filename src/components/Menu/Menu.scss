@@ -96,6 +96,7 @@
                     p {
                         font-size: 1.2rem;
                         font-weight: 500;
+                        width: 35px;
                     }
 
                     button {
@@ -195,6 +196,26 @@
                     .price-wrapper {
                         button {
                             padding: 10px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .menu-section {
+        .menu-body {
+            .food {
+                .lower-section {
+                    .price-wrapper {
+                        flex-direction: column;
+                        gap: 10px;
+                        align-items: baseline;
+
+                        button {
+                            width: 100%;
                         }
                     }
                 }
