@@ -16,14 +16,12 @@ const Navbar = () => {
     return (
         <header>
             <div className="wrapper">
-                <div className="logo">
+                <a href="/" className="logo">
                     <img src={Logo} alt="" />
                     <h3>
-                        <a href="/">
-                            <span>Deli</span>Food
-                        </a>
+                        <span>Deli</span>Food
                     </h3>
-                </div>
+                </a>
 
                 <div className={`navigation ${menuOpen ? "active" : ""}`}>
                     <MenuLinks />
