@@ -13,6 +13,12 @@ const Navbar = () => {
         setMenuOpen(!menuOpen)
     }
 
+    const goTop = () => {
+        window.scroll({
+            top: 0,
+        })
+    }
+
     return (
         <header>
             <div className="wrapper">
@@ -26,6 +32,7 @@ const Navbar = () => {
                 <div className={`navigation ${menuOpen ? "active" : ""}`}>
                     <MenuLinks />
                     <NavLink
+                        onClick={goTop}
                         to="/account"
                         className={"account-nav"}
                         style={{

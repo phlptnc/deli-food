@@ -6,9 +6,16 @@ import { RxReader } from "react-icons/rx"
 import { HiOutlineSquare3Stack3D } from "react-icons/hi2"
 
 function MenuLinks() {
+    const goTop = () => {
+        window.scroll({
+            top: 0,
+        })
+    }
+
     return (
         <>
             <NavLink
+                onClick={goTop}
                 to="/"
                 style={{ display: "flex", alignItems: "center", gap: "5px" }}
             >
@@ -16,6 +23,7 @@ function MenuLinks() {
                 Home
             </NavLink>
             <NavLink
+                onClick={goTop}
                 to="/menu"
                 style={{ display: "flex", alignItems: "center", gap: "5px" }}
             >
@@ -23,6 +31,7 @@ function MenuLinks() {
                 Menu
             </NavLink>
             <NavLink
+                onClick={goTop}
                 to="/blog"
                 style={{ display: "flex", alignItems: "center", gap: "5px" }}
             >
@@ -30,6 +39,7 @@ function MenuLinks() {
                 Blog
             </NavLink>
             <NavLink
+                onClick={goTop}
                 to="/about "
                 style={{ display: "flex", alignItems: "center", gap: "5px" }}
             >
